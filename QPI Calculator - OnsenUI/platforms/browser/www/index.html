@@ -1,0 +1,58 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+
+</head>
+
+<body>
+  <ons-page id="myPage">
+    <ons-toolbar style="background-color: #202020">
+        <div class="center" style="color: white; font-family: Consolas; font-style: bold; letter-spacing: 5px;">QPI CALCULATOR</div>
+    </ons-toolbar>
+    <div class="content">
+      <br><br>
+      <ons-card style="background-color: white; color: #202020">
+        <ons-row>
+          <textarea disabled id="input" value="" rows="2" cols="45" style="background-color: white; color: #202020; border: none;"></textarea>
+          </ons-row>
+      </ons-card>
+      <br><br>
+      <section style="padding: 8px">
+        <ons-row>
+          <ons-col><ons-button modifier="large" style="background-color: #202020; color: white; font-family: Consolas" id="A" value="4.0"> A </ons-button></ons-col>
+          <ons-col width="5px"></ons-col>
+          <ons-col><ons-button modifier="large" style="background-color: #202020; color: white; font-family: Consolas" id="Bplus" value="3.5"> B+ </ons-button></ons-col>
+          <ons-col width="5px"></ons-col>
+          <ons-col><ons-button modifier="large" style="background-color: #202020; color: white; font-family: Consolas" id="B" value="3.0"> B </ons-button></ons-col>
+        </ons-row>
+        <br>
+
+        <ons-row>
+          <ons-col><ons-button modifier="large" style="background-color: #202020; color: white; font-family: Consolas" id="Cplus" value="2.5"> C+ </ons-button></ons-col>
+          <ons-col width="5px"></ons-col>
+          <ons-col><ons-button modifier="large" style="background-color: #202020; color: white; font-family: Consolas" id="C" value="2.0"> C </ons-button></ons-col>
+          <ons-col width="5px"></ons-col>
+          <ons-col><ons-button modifier="large" style="background-color: #202020; color: white; font-family: Consolas" id="D" value="1.0"> D </ons-button></ons-col>
+        </ons-row>
+        <br>
+
+        <ons-row>
+          <ons-col><ons-button modifier="large" style="background-color: #202020; color: white; font-family: Consolas" id="F" value="0"> F/FD </ons-button></ons-col>
+          <ons-col width="5px"></ons-col>
+          <ons-col><ons-button modifier="large" style="background-color: #ff4f4f; color: white; font-family: Consolas" id="clear" value=""> CLR </ons-button></ons-col>
+          <ons-col width="5px"></ons-col>
+          <ons-col><ons-button modifier="large" style="background-color: #00bb5e; color: white; font-family: Consolas" id="equal" value="="> = </ons-button></ons-col>
+        </ons-row>
+      </section>
+    </div>
+  </ons-page>
+  <script src="js/jquery.js"></script>
+  <script src="js/onsenui.min.js"></script>
+  <script src="js/index.js"></script>
+    
+</body>
+</html>

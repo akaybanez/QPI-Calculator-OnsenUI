@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <h1>yo</h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      //take html tags with assigned values and set to variable.
+      //set textarea to the value of "blank", and add to values.
+      
+      var sum = 0;
+      var totalUnit = 0;
+      var check= 0;
+      
+       $('#four,#threefive,#three,#twofive,#two,#one,#0,#add').click(function() {
+        if(check == 1) {
+          $('textarea').val('');
+          check = 0;
+          $('p').text("")
+        }
+
+        var value = $(this).val();
+        var courseUnit = value * 3; 
+        sum = sum + courseUnit;
+        totalUnit = totalUnit + 3;
+          
+        var print =  $('textarea').val($('textarea').val() + value + " + ");
+        });
+      
+        //clicking equal sign evaluates the textarea
+        $('#equal').click(function() {
+          $('textarea').val(sum/totalUnit);
+          $('p').text(sum + "/ " + totalUnit)
+
+          check = 1;
+          totalUnit = 0;
+          sum = 0;
+          });
+
+        //clear
+        $('#clear').click(function() {
+          $('textarea').val('');
+          totalUnit = 0;
+          sum = 0;
+          $('p').text("")
+        });
+        
+    });
+    </script>
+	
+	
+  </head>
+
+  <body>
+
+    <div class="calc">
+      <div class="inputVal">
+        <textarea class="#input" value="" rows="2" cols="20"></textarea>
+        <p id="result"></p>
+      </div>
+      <div>
+        <button value="4.0" id="four">A</button>
+        <button value="3.5" id="threefive">B+</button>
+        <button value="3.0" id="three">B</button>
+      </div>
+      <div>
+        <button value="2.5" id="twofive">C+</button>
+        <button value="2.0" id="two">C</button>
+        <button value="1.0" id="one">D</button>
+        <button value="0" id="0">F</button>
+      </div>
+      <div>
+         <button value="" id="clear" style="color:red;">C</button>  
+        <button value="=" id="equal">=</button>
+      </div>
+    </div>
+
+  </body>
+</html>
